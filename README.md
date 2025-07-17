@@ -89,7 +89,7 @@ All API responses follow a standardized format:
 ### 3. Validate Blockchain
 
 - **GET** `/validate_chain`
-- **Response:**
+- **Success Response:**
   ```json
   {
     "data": { "chain_valid": true },
@@ -98,6 +98,16 @@ All API responses follow a standardized format:
     "status_code": 200
   }
   ```
+  **Error Response**
+  ```json
+  {
+    "data": { "chain_valid": false },
+    "status": "error",
+    "message": "Blockchain is not valid",
+    "status_code": 400
+  }
+  ```
+  
 
 ### 4. Fetch Block Data for Signing
 
