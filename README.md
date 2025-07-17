@@ -1,12 +1,17 @@
 # Flask Blockchain API
 
-A simple Flask-based REST API for interacting with a file-based blockchain. This project allows you to add new blocks (representing files and users), view the blockchain, and validate its integrity.
+A comprehensive Flask-based REST API for managing a file-based blockchain with digital signature capabilities. This project allows you to add new blocks (representing files and users), view the blockchain, validate its integrity, and manage digital signatures for file authentication.
 
 ## Features
 
-- Add a new block to the blockchain by uploading a file path and user ID
-- View the entire blockchain
-- Validate the integrity of the blockchain
+- ✅ Add new blocks to the blockchain by uploading file paths and user IDs
+- ✅ View the entire blockchain
+- ✅ Validate the integrity of the blockchain
+- ✅ Retrieve specific blocks by index
+- ✅ Digital signature management for blocks
+- ✅ Signature verification and validation
+- ✅ File integrity checking through SHA-256 hashing
+- ✅ Persistent blockchain storage in JSON format
 
 ## Setup
 
@@ -179,4 +184,10 @@ All API responses follow a standardized format:
 
 Each block contains:
 
-- `
+- **index**: Sequential block number
+- **previous_hash**: Hash of the previous block (creates the chain)
+- **file_hash**: SHA-256f the file content
+- **user_id**: Identifier of the user who added the block
+- **timestamp**: Unix timestamp when the block was created
+- **hash**: SHA-256 hash of the current block data
+
